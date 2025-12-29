@@ -1,0 +1,46 @@
+TITLE: Tripp Henderson, Bijective Infinite Resolution Space Filling Curve
+
+PROBLEM DESCRIPTION:
+A space filling curve acts as a one dimensional thread that weaves through every cell in a higher dimension. For example, 
+some space filling curve could take the two dimensional coordinate (1,1) and describe it in one dimension as (2). The 
+same curve could take the one dimensional coordinate (2) and describe it only as (1,1), therefore maintaining bijectivity. 
+However, I do not know of any space filling curves that can describe any point on a plane with any resolution. A curve 
+that can describe (1,1) may not necessarily have a one dimensional coordinate for (1.452,1⁄3). I intend on making a 
+program that uses a 2D-1D space filling curve that has infinite resolution (i.e. can describe any rational two coordinates 
+as one rational coordinate) while maintaining bijectivity, and exhibits this behavior to the user. In short, this program 
+was an attempt give the user a unique single number for every 2D coordinate the user gives it, and whenever prompted will be able 
+to return the same 2D coordinate when the user gives it the same single number.
+
+HOWEVER - It did not get completed.  I chose something WAYYYY too ambitious.  The program successfully has a backbone. 
+It has the structure to have a set of points that have 2D values that can be converted to 1D values and back bijectively, 
+but only about half the functions for the process are defined.  The backbone of this entire concept is using a 
+mathematical process that maps any value to an integer bijectively, and ALMOST all my funcitons for that process are 
+defined in rationaliterator, but the core funciton wasn't completed.  If you try running it, you'll get something CLOSE 
+to a list that has a bijective correlation between line number and value (from num and den).
+
+PROGRAM DOCUMENTATION: This program builds with boost::multiprecision::cpp_int, a library for processing very high 
+precision and size integers and rational fractions.  Each function has a fairly good description.  An iteration is just 
+one instance of mapping from an integer to a rational value (fraction).  A rational is the value it maps to.  All of 
+rationaliterator deals with that.  To test a function, please throw it into main.cpp and just follow the parameter 
+description.
+
+CLASS DESCRIPTION: The class is Point, which is literally a representation of a point on a 2D graph or a 1D number line.
+In the case that SFML was used, having multiple point objects to track how they work in comparison to eachother would have
+been beneficial.  Having Point as a class also meant intermediate variables for each object would help with the calculations.
+
+LIST DATA STRUCTURE: I used vector.  It was extremely important.  It was the only efficient way to move rational fractions and 
+cpp_int's between my file and different functions.  
+
+FILE I/O: The file "iterationFile" is the back bone of the entire program. To have any mapping between 1D and 2D points, mapping
+between integers and rational fractions through this file is required.  
+
+REFLECTIONS: Honestly, my decision making was great.  I just wasn't on top of my work this semester.  I actually really like
+the path I took when setting up this whole thing.  The number theory works in practice.  I just wish I learned how to do work faster,
+it's the bane of me.
+
+
+Listen.  It doesn't fulfill it's main function.  But it does a lot!  It properly uses classes and lists, properly uses const,
+is well organized, and uses files correctly.  It just doesn't quite work.  But it was close!  Please consider some grace when grading.
+I've done nothing but this project for the last 48 hours.  I've eaten once in the last 32 hours. I put my heart into this.
+It just didn't work out.  Look at how it's set up.  It's clearly not inedequate because of a poor understanding of C++,
+it's inadequate because of little time.
